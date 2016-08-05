@@ -1,0 +1,59 @@
+
+<!Doctype html>
+    
+<html>
+        <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title></title>
+
+        <script type="text/javascript" src="jquery.js"></script>
+     <script type="text/javascript">
+       $(document).ready(function(){
+         $(".main").click(function(){
+           $(".main-list").toggle();
+          var show =  $("#show").html();
+                         if(show == "隐藏")
+                         {
+                                 $("#show").html("展开");
+                         }
+                         else
+                         {
+                                 $("#show").html("隐藏");
+                         }
+          });
+        });
+  </script>
+  <style type="text/css">
+       li { list-style: none; }
+       .box {
+               width: 300px;
+               height: 200px;
+               border: #333 1px solid;
+       }
+       .main {
+               width: 60px;
+               height: 30px;
+               background: #666;
+               color: #fff;
+               line-height: 30px;
+               text-align: center;
+       }
+       .main-list {
+               color: #333;
+        display: none;
+       }
+  </style>
+
+        </head>
+<body>
+        <ul class="box">
+                <li class="main" id="main"><span id="show">隐藏</span>
+                        <ul class="main-list" id="main-list">
+                                <li>22</li>
+                                <li>22</li>
+                                <li>22</li>
+                        </ul>
+                </li>
+        </ul>
+</body>
+</html>
